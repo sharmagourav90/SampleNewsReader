@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="newsItem"
+            type="com.sample.news.data.models.NewsEntity" />
+
+        <variable
+            name="url"
+            type="String" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/padding">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/news_detail_title_style"
+            android:text="@{newsItem.title}" />
+
+        <ImageView
+            android:layout_width="@dimen/news_detail_image_width"
+            android:layout_height="@dimen/news_detail_image_height"
+            style="@style/news_detail_image_style"
+            app:url="@{url}"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/news_detail_abstract_style"
+            android:text="@{newsItem.abstract}" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/full_story_button_height"
+            android:text="@string/full_story"
+            android:id="@+id/full_story"/>
+
+    </LinearLayout>
+</layout>

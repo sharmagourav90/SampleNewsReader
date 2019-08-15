@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding">8dp</dimen>
+
+    <dimen name="news_item_image_width">100dp</dimen>
+    <dimen name="news_item_image_height">100dp</dimen>
+
+    <dimen name="news_detail_image_width">250dp</dimen>
+    <dimen name="news_detail_image_height">150dp</dimen>
+
+    <dimen name="full_story_button_height">50dp</dimen>
+</resources>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="newsItem"
+            type="com.sample.news.data.models.NewsEntity" />
+
+        <variable
+            name="url"
+            type="String" />
+
+        <variable
+            name="itemClickListener"
+            type="com.sample.news.ui.list.ItemClickListener" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        app:cardUseCompatPadding="true"
+        android:padding="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> itemClickListener.onItemClick(newsItem)}"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:layout_width="@dimen/news_item_image_width"
+                android:layout_height="@dimen/news_item_image_height"
+                style="@style/news_item_image_style"
+                app:url="@{url}" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@{newsItem.title}"
+                style="@style/news_item_title_style" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

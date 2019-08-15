@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">SampleNewsReader</string>
+    <string name="full_story">Full Story</string>
+
+    <string name="loading_data">Loading Data...</string>
+    <string name="no_connection">Connection Unavailable.</string>
+    <string name="error">Error in fetching data.</string>
+    
+    <string name="tap_item">Tap on news items to see detail.</string>
+</resources>
